@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-set rtp+=/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -24,6 +24,7 @@ set clipboard=unnamed
 set splitbelow
 set splitright
 set nu
+set bs=2
 
 set foldmethod=indent
 set foldlevel=99
@@ -40,6 +41,7 @@ let g:SimpylFold_docstring_preview=1
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+
 au BufNewFile,BufRead *.py
 	\ set tabstop=4
 	\ set softtabstop=4
@@ -49,9 +51,12 @@ au BufNewFile,BufRead *.py
 	\ set autoindent
 	\ set fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css, *.yml
+au BufNewFile,BufRead *.js,*.html,*.css,*.yml
 	\ set tabstop=2
 	\ set softtabstop=2
 	\ set shiftwidth=2
 
+"au BufRead,BufNewFile *.py,*.hs,*.c,*.cpp,*.h,*.adb,*.ads match BadWhitespace /\s\+$/
+
 set encoding=utf-8
+
